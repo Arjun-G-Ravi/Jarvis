@@ -2,26 +2,26 @@ import pyttsx3
 import datetime
 import speech_recognition as sr 
 engine = pyttsx3.init('sapi5') 
-def speak(audio):        #also prints the words
+def write(audio):        #also prints the words
      print('JARVIS: ' + audio) 
      engine.say(audio) 
      engine.runAndWait()
 
-def speech(audio):            #just voice
+def speak(audio):            #just voice
      engine.say(audio) 
      engine.runAndWait()                                                             
 
  
-def greetMe(): 
+def greet(): 
     currentH = int(datetime.datetime.now().hour) 
-    if currentH >= 0 and currentH < 12: 
+    if currentH >= 5 and currentH < 12: 
          speak('Good Morning!') 
  
-    if currentH >= 12 and currentH < 18: 
+    if currentH >= 12 and currentH < 16: 
         speak('Good Afternoon!') 
 
  
-    if currentH >= 18 and currentH !=0: 
+    else: 
          speak('Good Evening!') 
 
 def myCommand(): 
