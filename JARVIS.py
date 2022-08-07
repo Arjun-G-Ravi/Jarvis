@@ -13,7 +13,8 @@ from datetime import datetime
 
                              # importing user defined modules
 from speech import *  
-from aggame import *    
+from aggame import *  
+from agmodule import *  
 
 
                             # Some parameters
@@ -58,15 +59,53 @@ while True:
     elif x==2:
         guessgame()
     elif x==3:
-        pass
+        speak("These are some of the applications my  current version has.")
+        speak("You can choose any of these")
+        print()
+        print("Select the required application")
+        sleep(dt5)
+        print("1 Calculate Body Mass Index")
+        sleep(dt3)
+        print("2 Multiplication table")
+        sleep(dt3)
+        print("3 Factorial Calculation")
+        sleep(dt3)
+        print("4 Solving a quadratic equation")
+        sleep(dt3)
+        print("5 Calculating Fibonacci Series")
+        sleep(dt3)
+        print("6 Pascal's triangle")
+        sleep(dt3)
+        print("Press Enter to exit.")
+        print()
+        write("You can choose any of these: ")
+        ch=int(input())
+
+        if ch==1:
+            BMI()
+        elif ch==1:
+            mulTable()
+        elif ch==1:
+            factorial()
+        elif ch==1:
+            QE()
+        elif ch==1:
+            fib()
+        elif ch==1:
+            pasTriangle()
+        else:
+            pass
+
     elif x==4:
         pass
     elif x==5:
-        speak("It was nice talking with you")
+        pass
+    elif x==6:
+        word=random.choice(['',"It was nice talking to you","That was a nice chat","Thanks for the chat, mate","That was fun. Talk to me when free"])
+        speak(word)
         write("Good bye")
         break
     else:
-        
         write("Wrong Choice")
         write("Good bye")
         break
