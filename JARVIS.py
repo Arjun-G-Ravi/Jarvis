@@ -12,11 +12,14 @@ import random
 from datetime import datetime
 
                              # importing user defined modules
-from speech import *      
+from speech import *  
+from aggame import *    
 
 
                             # Some parameters
-dt=.3   #delay time
+dt3=.3   #delay time
+dt5=.5
+dt1=.1
 
 
 
@@ -34,28 +37,38 @@ greet()
 speak("I am Jarvis. Your personal digital assistant")
 while True:
     write("How may I help you?")
-    sleep(dt)
+    sleep(dt3)
+    print()
     print("1 Interactive mode")
+    sleep(dt1)
     print("2 Guess Game")
+    sleep(dt1)
     print("3 Applications")
+    sleep(dt1)
     print("5 Credits")
+    sleep(dt1)
     print("6 Exit")
-    sleep(dt)
+    sleep(dt5)
     print()
     write("Type in a choice: ")
-    x=int(input)
+    x=int(input())
 
     if x==1:
         pass
     elif x==2:
-        pass
+        guessgame()
     elif x==3:
         pass
     elif x==4:
         pass
     elif x==5:
-        pass
+        speak("It was nice talking with you")
+        write("Good bye")
+        break
     else:
-        pass
+        
+        write("Wrong Choice")
+        write("Good bye")
+        break
 
 

@@ -16,13 +16,11 @@ def greet():
     currentH = int(datetime.datetime.now().hour) 
     if currentH >= 5 and currentH < 12: 
          speak('Good Morning!') 
- 
-    if currentH >= 12 and currentH < 16: 
+    elif currentH >= 12 and currentH < 16: 
         speak('Good Afternoon!') 
-
- 
     else: 
          speak('Good Evening!') 
+
 
 def myCommand(): 
     r = sr.Recognizer()                                                                                    
