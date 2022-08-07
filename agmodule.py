@@ -58,34 +58,38 @@ def BMI():                #BMI
 
 
 def mulTable():                                #multiplication table
-    
-    n=int(input("Enter the number whose multiplication table you want to print:"))
-    m=int(input("Upto which number you want the table to be shown"))
+    write("Enter the number whose multiplication table you want to print:")
+    n=int(input())
+    write("Upto which number you want the table to be shown")
+    m=int(input())
     for a in range(1,m+1):
         print(n,"X",a,"=",n*a)
 
 def factorial():                                #factorial
-    num=int(input("Enter a number:-"))
+    write("Enter the number whose factorial you want to find: ")
+    num=int(input())
     a=1
     fact=1
     while a<= num:
         fact*=a
         a+=1
-    print("The factorial of",num,"is",fact)
-
+    word="The factorial of"+str(num)+"is"+str(fact)
+    write(word)
 def fib():
     n1=0
     n2=1
     count=0
     tup=()
-    ntr=int(input("Enter the number upto which fibanoci series is to be displayed:"))
+    write("Enter the number of terms which fibanoci series is to be displayed:")
+    ntr=int(input())
     if ntr<1:
-        print("Enter a positive number")
+        write("Enter a positive number")
     elif ntr==1:
-        print("fibanoci series upto 1:")
+        write("fibanoci series upto 1:")
         print("0")
     else:
-        print("Fibanoci series upto",ntr,"terms is:")
+        word="Fibanoci series upto"+str(ntr)+"terms is:"
+        write(word)
         while count<ntr:
             tup=tup+(n1,)
             nth=n1+n2
