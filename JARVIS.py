@@ -59,42 +59,44 @@ while True:
     elif x==2:
         guessgame()
     elif x==3:
-        speak("These are some of the applications my  current version has.")
-        speak("You can choose any of these")
-        print()
-        print("Select the required application")
-        sleep(dt5)
-        print("1 Calculate Body Mass Index")
-        sleep(dt3)
-        print("2 Multiplication table")
-        sleep(dt3)
-        print("3 Factorial Calculation")
-        sleep(dt3)
-        print("4 Solving a quadratic equation")
-        sleep(dt3)
-        print("5 Calculating Fibonacci Series")
-        sleep(dt3)
-        print("6 Pascal's triangle")
-        sleep(dt3)
-        print("Press Enter to exit.")
-        print()
-        write("You can choose any of these: ")
-        ch=int(input())
+        
 
-        if ch==1:
-            BMI()
-        elif ch==1:
-            mulTable()
-        elif ch==1:
-            factorial()
-        elif ch==1:
-            QE()
-        elif ch==1:
-            fib()
-        elif ch==1:
-            pasTriangle()
-        else:
-            pass
+        speak("These are some of the applications my  current version has.")
+        while True:    
+            print()
+            speak("Select the required application")
+            sleep(dt5)
+            print("1 Calculate Body Mass Index")
+            sleep(dt3)
+            print("2 Multiplication table")
+            sleep(dt3)
+            print("3 Factorial Calculation")
+            sleep(dt3)
+            print("4 Solving a quadratic equation")
+            sleep(dt3)
+            print("5 Calculating Fibonacci Series")
+            sleep(dt3)
+            print("6 Pascal's triangle")
+            sleep(dt3)
+            print("Press Enter to exit.")
+            print()
+            print("You can choose any of these: ")
+            ch=int(input())
+
+            if ch==1:
+                BMI()
+            elif ch==1:
+                mulTable()
+            elif ch==1:
+                factorial()
+            elif ch==1:
+                QE()
+            elif ch==1:
+                fib()
+            elif ch==1:
+                pasTriangle()
+            else:
+                break
 
     elif x==4:
         pass

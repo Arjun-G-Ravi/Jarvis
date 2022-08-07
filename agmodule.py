@@ -43,17 +43,18 @@ def BMI():                #BMI
     write("Enter height in metre:")
     height4BMI=float(input())
     bmi=weight4BMI/(height4BMI*height4BMI)
-    word="Your body mass index is"+ str(bmi)
+    bmi=round(bmi,2)
+    word="Your body mass index is "+ str(bmi)
     write(word)
     if bmi<15:
         write("You appear to be underweight")
-    if bmi<18.5:
-        write("You appear to slightly underweight")
-    if bmi<24.9:
+    elif bmi<18.5:
+        write("You appear to be slightly underweight")
+    elif bmi<24.9:
         write("You appear to be in the healthy BMI range")
-    if bmi<29.9:
+    elif bmi<29.9:
         write("You appear to be a bit overweight")
-    if bmi<=29.9:
+    elif bmi<=29.9:
         write("You appear to be obese")
 
 
@@ -76,7 +77,7 @@ def factorial():                                #factorial
     word="The factorial of"+str(num)+"is"+str(fact)
     write(word)
 def fib():
-    n1=0
+    n1=1
     n2=1
     count=0
     tup=()
@@ -85,18 +86,22 @@ def fib():
     if ntr<1:
         write("Enter a positive number")
     elif ntr==1:
-        write("fibanoci series upto 1:")
-        print("0")
+        write("fibanoci series upto 1 term:")
+        print("1")
+    elif ntr==2:
+        write("fibanoci series upto 2 terms:")
+        print("1")
+        print("1")
     else:
         word="Fibanoci series upto"+str(ntr)+"terms is:"
         write(word)
         while count<ntr:
-            tup=tup+(n1,)
-            nth=n1+n2
-            n1=n2
-            n2=nth
-            count+=1
-            print(tup)
+            for i in range(ntr-2):
+                n3=n1+n2
+                print(n3)
+                n1=n2
+                n2=n3
+            
 
 def pasTriangle(n):
     trow=[1]
